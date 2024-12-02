@@ -1,0 +1,23 @@
+#Prime_and_Non-Prime
+list=[]
+prime=[]
+nonprime=[]
+n=int(input("Enter the limit : "))
+for i in range(0,n):
+  a=int(input("Enter the elements to the main list : "))
+  list.append(a)
+print(list)
+
+for i in range(0,n):
+    if list[i]==1:
+        print("1 is neither prime nor composite")
+        continue
+    for j in range(2,list[i]):
+        if list[i]%j==0:
+            nonprime.append(list[i])
+            break
+    else:
+        prime.append(list[i])
+
+print("Prime List : ",prime)
+print("Non-Prime List : ",nonprime)
